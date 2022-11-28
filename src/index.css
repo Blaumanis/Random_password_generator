@@ -1,0 +1,311 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #191820;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+h1 {
+  color: #7a718b;
+  font-weight: 500;
+}
+
+/* password-output */
+.password-output {
+  background-color: #23222a;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+  color: #a3ffae;
+}
+.password {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.password::selection{
+  background-color: #a3ffae;
+  color: #232248;
+}
+.password-output svg {
+  cursor: pointer;
+  fill: #a3ffae;
+  width: 32px;
+  height: 32px;
+  transition: all 250ms linear;
+  padding-left: .5rem;
+}
+.password-output svg:hover {
+  fill: #fff;
+}
+
+/* password-generator */
+.password-generator {
+  width: 100%;
+  background-color: #23222a;
+  width: 100%;
+  padding: 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.range-input{
+  width: 100%;
+}
+.label-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.label-box label {
+  font-weight: 500;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.password-length {
+  color: #a3ffae;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.range-input input{
+  appearance: none;
+  width: 100%;
+  height: 7.5px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #191820;
+  border-radius: 5px;
+  background-image: linear-gradient(#a3ffae, #a3ffae);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  
+}
+#range::-webkit-slider-thumb {
+  appearance: none;
+  width: 27.5px;
+  height: 27.5px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 250ms linear;
+}
+#range::-webkit-slider-runnable-track  {
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+#range::-webkit-slider-thumb:hover {
+  outline: 1px solid #a3ffae;
+  background-color: #191820;
+}
+
+/* checkbox-inputs */
+.checkbox-box input{
+  margin-right: 1.25rem;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  position: relative;
+  cursor: pointer;
+}
+.checkbox-box input::before{
+  content: '';
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 250ms linear;
+}
+.checkbox-box input:hover::before {
+  border: 2px solid #a3ffae;
+}
+.checkbox-box input:checked::before {
+  content: '✓';
+  background-color: #a3ffae;
+  border: none;
+}
+
+/* labels */
+.checkbox-box label{
+  font-size: 1.25rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.checkbox-box label:hover .checkbox-box input::before {
+  border: 2px solid #a3ffae;
+}
+
+/* ckeckbox box */
+.checkbox-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+/* strenght-container */
+.strength-container {
+  width: 100%;
+  background-color: #191820;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.strength-container h3{
+  font-size: 1.15rem;
+  color: #807c92;
+  text-transform: uppercase;
+}
+
+.strength-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.strength-name {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+
+.strength-bars {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  height: inherit;
+}
+
+.bar {
+  height: 27px;
+  width: 10px;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+/* button */
+.btn {
+  background-color: #a3ffae;
+  color: #232248;
+  width: 100%;
+  padding: 1.25rem;
+  border: none;
+  font-family: inherit;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 1rem;
+  transition: all 250ms linear;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+}
+.btn svg {
+  margin-top: 2px;
+  font-size: 14px;
+}
+.btn:hover {
+  background-color: transparent;
+  outline: 1px solid #a3ffae;
+  color: #a3ffae;
+}
+
+.too-weak {
+  background-color: #f74b4b;
+  border: none;
+}
+.weak {
+  background-color: #fb7a56;
+  border: none;
+}
+.medium {
+  background-color: #fb7a56;
+  border: none;
+}
+.strong {
+  background-color: #a3ffae;
+  border: none;
+}
+
+.disabled {
+  pointer-events: none;
+  background-color: #f74b4b;
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .password-output {
+    padding: 2rem 1rem;
+  }
+  .password {
+    font-size: 1.25rem;
+  }
+  .password-generator {
+    padding: 2rem 1rem;
+  }
+  .checkbox-box label, .label-box label {
+    font-size: 1.15rem;
+  }
+  .strength-container {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .strength-container h3 {
+    font-size: 1rem;
+  }
+  .strength-name {
+    font-size: 1.15rem;
+  }
+  .btn {
+    padding: 1rem;
+  }
+}
